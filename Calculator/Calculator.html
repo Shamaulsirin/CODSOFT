@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+        background-color:grey;
+        font-family:Arial;
+        outline: none;
+        box-sizing:border-box;
+    }
+    .background{
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+        display: flex;
+    }
+    .calculator{
+        background-color:black;
+        border-radius: 50px;
+        padding:18px;
+        display: grid;
+        grid-template-columns: repeat(4,68px);
+    }
+    input{
+        height: 80px;
+        width: 250px;
+        background-color:white;
+        border-radius:20px;
+        margin: auto;
+        margin-top:25px;
+        margin-bottom:25px;
+        padding: 15px;
+        color: grey;
+        font-size:60px;
+        text-align:right;
+        grid-column: span 4;
+    }
+    button{
+        height:40px;
+        width:40px;
+        background-color:white;
+        border: none;
+        border-radius: 50%;
+        margin: 8px;
+        font-size: 16px;
+    }
+    .equalsto{
+        background-color:white;
+        width:110px;
+        border-radius:20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="calculator">
+            <input type="text"placeholder="0" id="output">
+            <button onclick="Clear()">C</button>
+            <button onclick="del()">del</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>   
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="calculate()" class="equalsto">=</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        let output=document.getElementById("output");
+
+        function display(n){
+            output.value += n;
+        }
+        function calculate(){
+            try{
+                output.value=eval(output.value);
+            }
+            catch(err)
+            {       
+                alert("Syntax Error")
+            }
+        }
+        function Clear(){
+            output.value="";
+        }
+        function del(){
+            output.value=output.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>
