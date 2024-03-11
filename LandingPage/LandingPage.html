@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                font-family:Arial;
+            }
+            section{
+                min-height:100vh;
+                background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url("image.webp");
+                background-repeat:no repeat;
+                background-size:cover;
+                padding:10px;
+            }
+            .container{
+                width:85%;
+                margin:auto;
+                padding:10px;
+
+            }
+            nav{
+                height: 110px;
+            }
+            nav hl{
+                float:left;
+                line-height: 80px;
+                font-size:35px;
+                font-size:inline;
+                color:#e77422;
+                font-weight:bold;
+            }
+            nav ul{
+                float:right;
+                line-height:80px;
+            }
+            nav ul li{
+                display: inline-block;
+                list-style:none;
+                padding: 0px 5 px;
+            }
+            nav ul li a{
+                color:#fff;
+                text-decoration:none;
+                text-transform:uppercase;
+                border-radius:5px;
+                padding:7px 8px;
+                
+            }
+            nav ul li a:hover{
+                background-color:#e77422;
+                transition: 0.5s ease;
+            }
+            nav ul li .active{
+                background-color:#e77422;
+            }
+            .article{
+                width:50%;
+                padding:100px;
+                margin:auto;
+                text-align:center;
+                color:white;
+                
+            }
+            .article h1{
+                 font-size:36px;
+                 color:#fff;
+                 letter-spacing:1.5px;
+                 font-weight:800;
+                 margin-bottom:25px;
+                 text-align:center;
+            }
+            .article p{
+                font-size:18px;
+                color:#7e7e7e;
+                line-height:2px;
+                margin-bottom:50px;
+
+            }
+            .article .btn{
+                color:#fff;
+                padding:12px 25px;
+                letter-spacing:1.5px;text-transform:uppercase;
+                text-decoration:none;
+                background-color:#f15048;
+
+            }
+            .article .btn:hover{
+                background-color:#4399fa;
+                transition:0.5s ease;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <section>
+            <div class="container">
+                <nav>
+                    <hl>Logo</hl>
+                    <ul>
+                        <li><a href="" class="active">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Project</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="article">
+                    <h1>Best HTML Website Templates</h1>
+                    <p>Explore the wide variety of popular HTML templates </p>
+                    <a href=""class="btn">Download Now</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
